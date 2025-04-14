@@ -27,7 +27,7 @@ $reservation = new Reservation();
 // On déclare les valeurs des propriétés pour créer l'objet
 $reservation->name = "Cyril Catoen";
 $reservation->place = "Tokyo Sky Tower";
-$reservation->startDate = new DateTime("14-04-15");
+$reservation->startDate = new DateTime("25-04-15");
 $reservation->endDate = new DateTime("25-06-16");
 $reservation->cleaningOption = true;
 $reservation->nightPrice = 500;
