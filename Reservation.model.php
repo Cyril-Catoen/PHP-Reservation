@@ -35,7 +35,13 @@ class Reservation {
 		$this->totalPrice = $totalPrice;
 		$this->bookedAt = new DateTime();
 		$this->status = "CART";
+		}
+
+		public function cancel() {
+			if ($this->status === "CART") {
+					$this->status = "CANCELED";
 			}
+		}
 }
 
 // On simule les données de la BDD
