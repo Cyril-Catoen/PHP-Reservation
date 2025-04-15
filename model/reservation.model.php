@@ -75,5 +75,3 @@ $cleaning = false;
 // On initialise la création de l'objet
 $reservation = new Reservation($name , $place, $start, $end, $cleaning);
 $reservation->leaveComment("blabla");
-
-var_dump($reservation); 
