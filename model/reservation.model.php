@@ -65,13 +65,13 @@ class Reservation {
 		}
 }
 
-// On simule les données de la BDD
-$name = "Cyril Catoen";
-$place = "Tokyo Sky Tower";
-$start = new DateTime('2025-04-15');
-$end = new DateTime('2025-06-16');
-$cleaning = false;
+// // On simule les données de la BDD
+// $name = "Cyril Catoen";
+// $place = "Tokyo Sky Tower";
+// $start = new DateTime('2025-04-15');
+// $end = new DateTime('2025-06-16');
+// $cleaning = false;
 
-// On initialise la création de l'objet
-$reservation = new Reservation($name , $place, $start, $end, $cleaning);
-$reservation->leaveComment("blabla");
+// // On initialise la création de l'objet
+// $reservation = new Reservation($name , $place, $start, $end, $cleaning);
+// $reservation->leaveComment("blabla");

@@ -35,8 +35,18 @@ require_once('partial/header.php');
         </div>
 
         <button class="submit3" type="submit">Réserver</button>
-
     </form>
+   <?php if (isset($booking)) { ?>
+		<div>
+			<p>Résumé de la réservation :</p>
+			<p>Nom : <?php echo $booking->name; ?></p>
+			<p>Lieu : <?php echo $booking->place; ?></p>
+			<p>Dates : <?php echo $booking->startDate->format('d-m-y'); ?> / <?php echo $booking->endDate->format('d-m-y'); ?></p>
+			<p>Prix total : <?php echo $booking->totalPrice; ?> $</p>
+			<p>Option de ménage ? : <?php echo $booking->cleaningOption ? "oui" : "non"; ?></p>
+		</div>
+	<?php } ?>
+
 </main>
 
 <?php
