@@ -30,13 +30,18 @@ class Reservation {
 
 	// on automatise le traitement par la création d'une fonction construct
 	function __construct($name, $place, $startDate, $endDate, $cleaningOption)  {
+		if (strlen($name) < 2) {
+			throw new Exception('Le nom doit être une chaîne de caractères supérieur à 2');
+		}
+		
 		$this->name = $name;
 		$this->place = $place;
 		$this->startDate = $startDate;
 		$this->endDate = $endDate;
 		$this->cleaningOption = $cleaningOption;
-
 		$this->nightPrice = 500;
+		
+		
 
 		// Calcul du prix par nuit
 		$totalPrice = (($this->endDate->getTimestamp() - $this->startDate->getTimestamp()) / (3600 * 24) * $this->nightPrice) + 50;

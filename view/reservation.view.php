@@ -47,6 +47,10 @@ require_once('partial/header.php');
 		</div>
 	<?php } ?>
 
+    <?php if (isset($error)) {
+        echo $error;
+	} ?>
+
 </main>
 
 <?php
