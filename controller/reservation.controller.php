@@ -1,9 +1,10 @@
 <?php 
 require_once('../config.php');
+require_once('../model/reservation.repository.php');
 require_once('../model/reservation.model.php');
 
-$booking = null;
 $error = "";
+$booking = null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupération des valeurs du formulaire
@@ -28,10 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         try{
             $booking = new Reservation($name, $place, $startDate, $endDate, $cleaningChoice);
+            persistReservation($booking);
         } catch(Exception $e){
             $error = $e->getMessage();
         }
     }
+
+$bookingForUser = findReservationForUser();
     
 require_once('../view/reservation.view.php');
 ?>
