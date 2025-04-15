@@ -20,6 +20,14 @@ class Reservation {
 
 	public $cleaningOption;
 
+	public $paidAt;
+
+	public $cancelledAt;
+
+	public $comment;
+
+	public $commentedAt;
+
 	// on automatise le traitement par la création d'une fonction construct
 	function __construct($name, $place, $startDate, $endDate, $cleaningOption)  {
 		$this->name = $name;
@@ -37,10 +45,23 @@ class Reservation {
 		$this->status = "CART";
 		}
 
-		public function cancel() {
+		public function cancelReservation() {
 			if ($this->status === "CART") {
-					$this->status = "CANCELED";
+					$this->status = "CANCELLED";
+					$this->cancelledAt = new DateTime();
 			}
+		}
+
+		public function payReservation() {
+			if ($this->status === "CART") {
+					$this->status = "PAID";
+					$this->paidAt = new DateTime();
+			}
+		}
+
+		public function leaveComment($comment) {
+					$this->comment = $comment;
+					$this->commentedAt = new DateTime();
 		}
 }
 
@@ -53,5 +74,6 @@ $cleaning = false;
 
 // On initialise la création de l'objet
 $reservation = new Reservation($name , $place, $start, $end, $cleaning);
+$reservation->leaveComment("blabla");
 
 var_dump($reservation); 
