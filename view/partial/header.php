@@ -18,6 +18,7 @@
         <ul>
             <li><a href="reservation.controller.php">Réserver</a></li>
             <li><a href="pay-reservation.controller.php">Payer</a></li>
+            <li><a href="comment-reservation.controller.php">Commenter</a></li>
             <li><a href="cancel-reservation.controller.php">Annuler</a></li>
         </ul>
     </nav>
