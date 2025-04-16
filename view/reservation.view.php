@@ -44,7 +44,8 @@ require_once('partial/header.php');
 			<p>Dates : <?php echo $bookingForUser->startDate->format('d-m-y'); ?> / <?php echo $bookingForUser->endDate->format('d-m-y'); ?></p>
 			<p>Prix total : <?php echo $bookingForUser->totalPrice; ?> $</p>
 			<p>Option de ménage ? : <?php echo $bookingForUser->cleaningOption ? "oui" : "non"; ?></p>
-		</div>
+            <p>Statut : <?php echo $bookingForUser->status; ?></p>
+        </div>
 	<?php } ?>
 
     <?php if (isset($error)) {
