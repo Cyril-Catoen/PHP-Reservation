@@ -12,7 +12,8 @@ $bookingForUser = findReservationForUser() ?? null;
 // Si formulaire soumis : suppression de commande
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($bookingForUser) {
-        $bookingForUser -> cancelReservation();
+        $bookingForUser -> payReservation();
+        $message ="Vous avez payé votre réservation. Merci.";
     
         try{
             persistReservation($bookingForUser);
@@ -21,8 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-
 ?>
 
-<?php require_once('../view/cancel-reservation.view.php');
+<?php require_once('../view/pay-reservation.view.php');
 ?>

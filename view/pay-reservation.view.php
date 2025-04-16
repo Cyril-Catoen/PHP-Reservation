@@ -13,9 +13,12 @@ require_once('partial/header.php');
 				<p>Prix total : <?php echo $bookingForUser->totalPrice; ?> $</p>
 				<p>Option de ménage ? : <?php echo $bookingForUser->cleaningOption ? "oui" : "non"; ?></p>
 				<p>Statut : <?php echo $bookingForUser->status; ?></p>
+				<?php if (isset($message)) { ?>
+				<p class="green"><?php echo $message ?></p>
+				<?php } ?>
 			</div>
 			<form method="POST" action="">
-            	<button class="submit2" type="submit">Annuler la réservation</button>
+            	<button class="submit2" type="submit">Payer la réservation</button>
         	</form>
     <?php } else { ?>
         <p>Vous n'avez pas de réservation connue.</p>
