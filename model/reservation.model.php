@@ -65,10 +65,11 @@ class Reservation {
 		}
 
 		public function leaveComment($comment) {
+			if ($this->status === "PAID") {
 					$this->comment = $comment;
 					$this->commentedAt = new DateTime();
 		}
-}
+}}
 
 // // On simule les données de la BDD
 // $name = "Cyril Catoen";

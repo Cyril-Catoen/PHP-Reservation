@@ -4,7 +4,7 @@ require_once('partial/header.php');
 
 <?php if (isset($bookingForUser)) { ?>
 	<main>
-		<h2>Annuler votre réservation</h2>
+		<h2>Payer votre réservation</h2>
 			<div>
 				<p>Résumé de la réservation :</p>
 				<p>Nom : <?php echo $bookingForUser->name; ?></p>

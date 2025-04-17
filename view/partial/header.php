@@ -16,10 +16,11 @@
 <header>
     <nav>
         <ul>
-            <li><a href="reservation.controller.php">Réserver</a></li>
-            <li><a href="pay-reservation.controller.php">Payer</a></li>
-            <li><a href="comment-reservation.controller.php">Commenter</a></li>
-            <li><a href="cancel-reservation.controller.php">Annuler</a></li>
+            <li><a href="home">Accueil</a></li>
+            <li><a href="booking">Réserver</a></li>
+            <li><a href="pay-booking">Payer</a></li>
+            <li><a href="comment-booking">Commenter</a></li>
+            <li><a href="cancel-booking">Annuler</a></li>
         </ul>
     </nav>
 </header>
